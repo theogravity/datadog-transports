@@ -1,0 +1,29 @@
+name: Snapshot Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  snapshot:
+    name: Snapshot Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Use pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile --prefer-offline
+
+      - name: Create Snapshot Release
+        run: |
+          pnpm run version-packages --snapshot "${{ github.ref_name }}"
+          echo '---'
+          echo 'Detected Changes:'
+          git diff
+          echo '---'
+          pnpm run release --tag "${{ github.ref_name }}" --no-git-tag

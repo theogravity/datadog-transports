@@ -1,0 +1,51 @@
+{
+  "name": "pino-datadog-transport",
+  "version": "1.3.2",
+  "description": "A pino v7+ transport for sending logs to Datadog",
+  "files": [
+    "dist/*"
+  ],
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "tsup src/index.ts",
+    "format": "biome format src --write && biome format test --write",
+    "lint": "biome lint src && biome lint test",
+    "lint:check": "biome check --apply-unsafe src && check --apply-unsafe test",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theogravity/datadog-transports.git"
+  },
+  "author": "Theo Gravity <theo@suteki.nu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theogravity/datadog-transports/issues"
+  },
+  "homepage": "https://github.com/theogravity/datadog-transports/tree/main/packages/pino-datadog-transport#readme",
+  "keywords": [
+    "pino",
+    "datadog",
+    "transport",
+    "typescript"
+  ],
+  "dependencies": {
+    "datadog-transport-common": "workspace:*",
+    "pino-abstract-transport": "^1.0.0"
+  },
+  "devDependencies": {
+    "tsconfig": "workspace:*",
+    "tsup": "^8.0.2",
+    "vitest": "^1.4.0"
+  }
+}

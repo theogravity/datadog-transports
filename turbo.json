@@ -1,0 +1,23 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"globalDependencies": [
+		"**/.env.*local",
+		"biome.json",
+		"packages/tsconfig/**"
+	],
+	"pipeline": {
+		"build": {
+			"dependsOn": ["^build"],
+			"outputs": ["dist/**"]
+		},
+		"test": {
+			"inputs": ["test/**/*.ts"]
+		},
+		"lint": {},
+		"format": {},
+		"typecheck": {
+			"inputs": ["**/*.ts"],
+			"outputs": []
+		}
+	}
+}
