@@ -1,6 +1,6 @@
 {
   "name": "pino-datadog-transport",
-  "version": "1.3.2",
+  "version": "3.0.0",
   "description": "A pino v7+ transport for sending logs to Datadog",
   "files": [
     "dist/*"

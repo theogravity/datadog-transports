@@ -1,6 +1,6 @@
 {
   "name": "electron-log-transport-datadog",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Send logs to Datadog from electron-log in Electron.",
   "files": [
     "dist/*"
