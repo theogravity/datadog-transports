@@ -1,8 +1,8 @@
 import type { HTTPLogItem } from "@datadog/datadog-api-client/dist/packages/datadog-api-client-v2/models/HTTPLogItem";
 import type { LogsApiSubmitLogRequest } from "@datadog/datadog-api-client/dist/packages/datadog-api-client-v2/apis/LogsApi";
 import { client, v2 } from "@datadog/datadog-api-client";
-import pRetry from "p-retry";
-import exitHook from "exit-hook";
+import pRetry from "./vendor/p-retry";
+import exitHook from "./vendor/exit-hook";
 import { LogStorage } from "./LogStorage";
 import type { DDTransportOptions, SendLogOpts } from "./types";
 

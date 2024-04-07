@@ -7,3 +7,8 @@ This is a monorepo containing the following packages:
 - [`pino-datadog-transport`](https://github.com/theogravity/datadog-transports/tree/main/packages/pino-datadog-transport): Send logs to datadog using `pino`
 
 You can find information for them in their respective packages via the `README.md` file.
+
+# Cloning / pulling this monorepo
+
+This monorepo uses [`pnpm`](https://pnpm.io/) because [I couldn't
+get workspaces to work properly](https://github.com/vercel/turbo/issues/7910#issuecomment-2041209008) under `npm` and `yarn`.

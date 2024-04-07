@@ -8,6 +8,7 @@
     "indentStyle": "space",
     "lineWidth": 120,
     "ignore": [
+      "vendor/*",
       "node_modules/*",
       "*.config.*",
       "*.json",
@@ -17,6 +18,7 @@
   },
   "linter": {
     "enabled": true,
+    "ignore": ["vendor/*"],
     "rules": {
       "performance": {
         "noDelete": "off"
