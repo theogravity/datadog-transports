@@ -110,27 +110,29 @@ export class DataDogTransport {
    * Sets up a hook to send any remaining logs on application exit
    */
   private setupExitHook() {
-    if (this.config.onDebug) {
-      this.config.onDebug("Configuring exit hook");
-    }
-
-    exitHook(() => {
-      if (this.logStorage.getLogCount() > 0) {
-        if (this.config.onDebug) {
-          this.config.onDebug("Shutdown detected. Attempting to send remaining logs to Datadog");
-        }
-        if (this.timer) {
-          clearInterval(this.timer);
-        }
-
-        const currentBucket = this.logStorage.currentBucket;
-
-        this.sendLogs({
-          logsToSend: this.logStorage.finishLogBatch(),
-          bucketName: currentBucket,
-        });
+    if (!this.config.sendImmediate) {
+      if (this.config.onDebug) {
+        this.config.onDebug("Configuring exit hook");
       }
-    });
+
+      exitHook(() => {
+        if (this.logStorage.getLogCount() > 0) {
+          if (this.config.onDebug) {
+            this.config.onDebug("Shutdown detected. Attempting to send remaining logs to Datadog");
+          }
+          if (this.timer) {
+            clearInterval(this.timer);
+          }
+
+          const currentBucket = this.logStorage.currentBucket;
+
+          this.sendLogs({
+            logsToSend: this.logStorage.finishLogBatch(),
+            bucketName: currentBucket,
+          });
+        }
+      });
+    }
   }
 
   /**
