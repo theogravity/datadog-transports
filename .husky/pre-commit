@@ -1,6 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+pnpm build
 pnpm typecheck
 pnpm lint:packages
 pnpm test

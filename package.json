@@ -14,7 +14,6 @@
     "lint:packages": "pnpm run lint:packages:semver && pnpm run lint:packages:mismatches",
     "lint:packages:semver": "syncpack lint-semver-ranges",
     "lint:packages:mismatches": "syncpack list-mismatches",
-    "prepublishOnly": "pnpm run clean && pnpm run test && pnpm run lint && pnpm run lint:packages && pnpm run build",
     "publish-packages": "turbo run build && changeset version && changeset publish",
     "release": "changeset publish",
     "syncpack": "syncpack",
