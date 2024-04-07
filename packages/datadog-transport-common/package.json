@@ -43,10 +43,11 @@
   },
   "dependencies": {
     "@datadog/datadog-api-client": "^1.23.0",
-    "exit-hook": "^2.2.1",
-    "p-retry": "^4.6.2"
+    "is-network-error": "^1.1.0",
+    "retry": "^0.13.1"
   },
   "devDependencies": {
+    "@types/retry": "^0.12.5",
     "tsconfig": "workspace:*",
     "tsup": "^8.0.2",
     "vitest": "^1.4.0"

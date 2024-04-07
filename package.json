@@ -3,14 +3,14 @@
   "private": true,
   "scripts": {
     "add-changeset": "changeset add",
-    "build": "turbo build",
+    "build": "turbo run build",
     "changeset": "changeset",
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "turbo clean",
-    "format": "turbo format --continue --",
-    "format:fix": "turbo format --continue -- --write",
-    "lint": "turbo lint --continue --",
-    "lint:fix": "turbo lint --continue -- --apply",
+    "format": "turbo run format --continue --",
+    "format:fix": "turbo run format --continue -- --write",
+    "lint": "turbo run lint --continue --",
+    "lint:fix": "turbo run lint --continue -- --apply",
     "lint:packages": "pnpm run lint:packages:semver && pnpm run lint:packages:mismatches",
     "lint:packages:semver": "syncpack lint-semver-ranges",
     "lint:packages:mismatches": "syncpack list-mismatches",
@@ -18,9 +18,10 @@
     "publish-packages": "turbo run build && changeset version && changeset publish",
     "release": "changeset publish",
     "syncpack": "syncpack",
-    "test": "turbo test",
-    "typecheck": "turbo typecheck",
-    "version-packages": "changeset version"
+    "test": "turbo run test --",
+    "typecheck": "turbo run typecheck",
+    "version-packages": "changeset version",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.6.4",
@@ -29,7 +30,8 @@
     "@commitlint/cli": "^19.2.1",
     "@commitlint/config-conventional": "^19.1.0",
     "@types/node": "^20.12.5",
-    "husky": "^9.0.11",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.2",
     "syncpack": "^12.3.0",
     "tsconfig": "workspace:*",
     "turbo": "^1.13.2",
@@ -39,9 +41,7 @@
   "engines": {
     "node": ">=18"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,html,css,json}": ["pnpm lint:fix"]
   }
 }

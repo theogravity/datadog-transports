@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import * as datadogApiClient from "@datadog/datadog-api-client";
-import pRetry from "p-retry";
-import * as exitHook from "exit-hook";
+import pRetry from "../src/vendor/p-retry";
+import * as exitHook from "../src/vendor/exit-hook";
 import { type LogStorage, DataDogTransport } from "../src";
 
 vi.mock("@datadog/datadog-api-client", () => ({
@@ -18,11 +18,11 @@ vi.mock("@datadog/datadog-api-client", () => ({
   },
 }));
 
-vi.mock("p-retry", () => ({
+vi.mock("../src/vendor/p-retry", () => ({
   default: vi.fn((fn) => fn()),
 }));
 
-vi.mock("exit-hook", () => ({
+vi.mock("../src/vendor/exit-hook", () => ({
   default: vi.fn((callback) => callback()),
 }));
 
