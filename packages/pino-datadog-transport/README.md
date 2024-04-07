@@ -1,9 +1,6 @@
 # pino-datadog-transport
 
-[![NPM version](https://img.shields.io/npm/v/pino-datadog-transport.svg?style=flat-square)](https://www.npmjs.com/package/pino-datadog-transport)
-[![CircleCI](https://circleci.com/gh/theogravity/node-pino-datadog-transport.svg?style=svg)](https://circleci.com/gh/theogravity/pino-datadog-transport)
-![built with typescript](https://camo.githubusercontent.com/92e9f7b1209bab9e3e9cd8cdf62f072a624da461/68747470733a2f2f666c61742e62616467656e2e6e65742f62616467652f4275696c74253230576974682f547970655363726970742f626c7565)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM version](https://img.shields.io/npm/v/pino-datadog-transport.svg?style=flat-square)](https://www.npmjs.com/package/pino-datadog-transport) [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](http://www.typescriptlang.org/)
 
 A [pino v7+](https://github.com/pinojs/pino) transport for sending logs to [Datadog](https://datadog.com/).
 
