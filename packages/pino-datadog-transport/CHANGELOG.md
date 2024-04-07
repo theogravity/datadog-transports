@@ -1,5 +1,11 @@
 # pino-datadog-transport
 
+## 3.0.1
+
+### Patch Changes
+
+- [`23c2b34`](https://github.com/theogravity/datadog-transports/commit/23c2b347b6e76f3696cb8a41efa2554c8a4d4aca) Thanks [@theogravity](https://github.com/theogravity)! - Remove stale badges from the readme
+
 ## 3.0.0
 
 ### Major Changes
