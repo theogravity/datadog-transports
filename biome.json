@@ -13,12 +13,13 @@
       "*.config.*",
       "*.json",
       "tsconfig.json",
-      ".turbo"
+      ".turbo",
+      "dist/*"
     ]
   },
   "linter": {
     "enabled": true,
-    "ignore": ["vendor/*"],
+    "ignore": ["vendor/*", "dist/*"],
     "rules": {
       "performance": {
         "noDelete": "off"
