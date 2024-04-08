@@ -13,12 +13,14 @@
       "*.config.*",
       "*.json",
       "tsconfig.json",
-      ".turbo"
+      ".turbo",
+      "dist/*",
+      ".pnpm-store/*"
     ]
   },
   "linter": {
     "enabled": true,
-    "ignore": ["vendor/*"],
+    "ignore": ["vendor/*", "dist/*", ".pnpm-store/*"],
     "rules": {
       "performance": {
         "noDelete": "off"

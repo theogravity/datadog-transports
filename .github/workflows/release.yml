@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  PNPM_CACHE_FOLDER: .pnpm-store
+
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
@@ -18,10 +21,25 @@ jobs:
       - name: Use pnpm
         uses: pnpm/action-setup@v3
         with:
-          version: 8
+          version: 8.x
+
+      - name: setup pnpm config
+        run: pnpm config set store-dir $PNPM_CACHE_FOLDER
 
       - name: Install Dependencies
-        run: pnpm install --frozen-lockfile --prefer-offline
+        run: pnpm install --frozen-lockfile
+
+      - name: Build workspace packages
+        run: pnpm build
+
+      - name: Run package checking
+        run: pnpm run lint:packages
+
+      - name: Run type checking
+        run: pnpm run typecheck
+
+      - name: Run linting
+        run: pnpm run lint
 
       - name: Create Release Pull Request
         uses: changesets/action@v1
