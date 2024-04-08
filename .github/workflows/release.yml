@@ -41,7 +41,7 @@ jobs:
       - name: Run linting
         run: pnpm run lint
 
-      - name: Create Release Pull Request
+      - name: Create Release Pull Request / Publish Packages
         uses: changesets/action@v1
         with:
           publish: pnpm run release
