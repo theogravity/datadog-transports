@@ -21,8 +21,7 @@
     "format": "biome format src --write && biome format test --write",
     "lint": "biome lint src && biome lint test",
     "lint:check": "biome check --apply-unsafe src && check --apply-unsafe test",
-    "typecheck": "tsc --noEmit",
-    "prepublishOnly": "pnpm run build"
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git",

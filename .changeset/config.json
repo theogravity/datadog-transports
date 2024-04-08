@@ -2,5 +2,8 @@
   "$schema": "https://unpkg.com/@changesets/config@3.0.0/schema.json",
   "changelog": ["@changesets/changelog-github", { "repo":  "theogravity/datadog-transports" }],
   "access": "public",
-  "baseBranch": "main"
+  "baseBranch": "main",
+  "linked": [
+    ["electron-log-transport-datadog", "pino-datadog-transport", "datadog-transport-common"]
+  ]
 }
