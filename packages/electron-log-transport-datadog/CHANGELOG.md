@@ -1,5 +1,11 @@
 # electron-log-transport-datadog
 
+## 3.0.2
+
+### Patch Changes
+
+- [`713aac6`](https://github.com/theogravity/datadog-transports/commit/713aac666db3140d63321160d37029c8b19029ca) Thanks [@theogravity](https://github.com/theogravity)! - fix: more publish fixes
+
 ## 3.0.1
 
 ### Patch Changes
