@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "description": "A library for sending batches of JSON log data to datadog",
   "files": [
-    "dist/*"
+    "dist"
   ],
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
@@ -22,7 +22,8 @@
     "format": "biome format src --write && biome format test --write",
     "lint": "biome lint src && biome lint test",
     "lint:check": "biome check --apply-unsafe src && check --apply-unsafe test",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
   },
   "publishConfig": {
     "access": "public"
@@ -36,7 +37,8 @@
   "homepage": "https://github.com/theogravity/datadog-transports/tree/main/packages/datadog-transport-common#readme",
   "repository": {
     "type": "git",
-    "url": "git@github.com:theogravity/datadog-transports.git"
+    "url": "git@github.com:theogravity/datadog-transports.git",
+    "directory": "packages/datadog-transport-common"
   },
   "bugs": {
     "url": "https://github.com/theogravity/datadog-transports/issues"

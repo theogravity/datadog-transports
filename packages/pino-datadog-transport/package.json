@@ -3,7 +3,7 @@
   "version": "3.0.1",
   "description": "A pino v7+ transport for sending logs to Datadog",
   "files": [
-    "dist/*"
+    "dist"
   ],
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
@@ -21,11 +21,13 @@
     "format": "biome format src --write && biome format test --write",
     "lint": "biome lint src && biome lint test",
     "lint:check": "biome check --apply-unsafe src && check --apply-unsafe test",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/theogravity/datadog-transports.git"
+    "url": "git+https://github.com/theogravity/datadog-transports.git",
+    "directory": "packages/pino-datadog-transport"
   },
   "author": "Theo Gravity <theo@suteki.nu>",
   "license": "MIT",

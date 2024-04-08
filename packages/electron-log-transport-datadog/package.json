@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "description": "Send logs to Datadog from electron-log in Electron.",
   "files": [
-    "dist/*"
+    "dist"
   ],
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
@@ -22,7 +22,8 @@
     "format": "biome format src --write && biome format test --write",
     "lint": "biome lint src && biome lint test",
     "lint:check": "biome check --apply-unsafe src && check --apply-unsafe test",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
   },
   "publishConfig": {
     "access": "public"
@@ -41,7 +42,8 @@
   "homepage": "https://github.com/theogravity/datadog-transports/tree/main/packages/electron-log-transport-datadog#readme",
   "repository": {
     "type": "git",
-    "url": "git@github.com:theogravity/datadog-transports.git"
+    "url": "git@github.com:theogravity/datadog-transports.git",
+    "directory": "packages/electron-log-transport-datadog"
   },
   "bugs": {
     "url": "https://github.com/theogravity/datadog-transports/issues"
