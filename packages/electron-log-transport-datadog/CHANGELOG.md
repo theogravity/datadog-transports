@@ -1,5 +1,14 @@
 # electron-log-transport-datadog
 
+## 3.0.1
+
+### Patch Changes
+
+- [#7](https://github.com/theogravity/datadog-transports/pull/7) [`8b1f73a`](https://github.com/theogravity/datadog-transports/commit/8b1f73ab5faec95459ab22a1dcb350997caf7c6c) Thanks [@theogravity](https://github.com/theogravity)! - fix: files not being published on release
+
+- Updated dependencies [[`8b1f73a`](https://github.com/theogravity/datadog-transports/commit/8b1f73ab5faec95459ab22a1dcb350997caf7c6c)]:
+  - datadog-transport-common@3.0.1
+
 ## 3.0.0
 
 ### Major Changes
