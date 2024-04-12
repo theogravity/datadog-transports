@@ -44,7 +44,6 @@
   },
   "dependencies": {
     "@datadog/datadog-api-client": "^1.23.0",
-    "is-network-error": "^1.1.0",
     "retry": "^0.13.1"
   },
   "devDependencies": {
