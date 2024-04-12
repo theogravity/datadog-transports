@@ -1,5 +1,5 @@
 import retry from 'retry';
-import isNetworkError from 'is-network-error';
+import isNetworkError from '../is-network-error';
 
 export class AbortError extends Error {
 	constructor(message) {
