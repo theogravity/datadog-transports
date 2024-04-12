@@ -1,5 +1,14 @@
 # electron-log-transport-datadog
 
+## 3.0.3
+
+### Patch Changes
+
+- [#12](https://github.com/theogravity/datadog-transports/pull/12) [`649129f`](https://github.com/theogravity/datadog-transports/commit/649129fae9e2777bae64b4f49a89d862f0b75f8a) Thanks [@theogravity](https://github.com/theogravity)! - Fix ERR_REQUIRE_ESM import error caused by is-network-error package by vendoring it.
+
+- Updated dependencies [[`649129f`](https://github.com/theogravity/datadog-transports/commit/649129fae9e2777bae64b4f49a89d862f0b75f8a)]:
+  - datadog-transport-common@3.0.2
+
 ## 3.0.2
 
 ### Patch Changes
