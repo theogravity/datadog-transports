@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- [`8fc5802`](https://github.com/theogravity/datadog-transports/commit/8fc5802b831e91e547c060e44afb257b61f0396d) Thanks [@theogravity](https://github.com/theogravity)! - Export type DDTransportOptions
+- [#14](https://github.com/theogravity/datadog-transports/pull/14) [`047576b`](https://github.com/theogravity/datadog-transports/commit/047576b15304ce22a72ab5b24b1abe46d4ffca49) Thanks [@alandotcom](https://github.com/alandotcom)! - Export type DDTransportOptions
 
 ## 3.0.3
 
