@@ -2,6 +2,8 @@ import build from "pino-abstract-transport";
 import { DataDogTransport, type DDTransportOptions } from "datadog-transport-common";
 import { convertLevel } from "./convert-level";
 
+export type { DDTransportOptions };
+
 export default (options: DDTransportOptions) => {
   const transport = new DataDogTransport(options);
 
