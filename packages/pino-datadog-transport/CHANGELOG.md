@@ -1,5 +1,11 @@
 # pino-datadog-transport
 
+## 3.0.4
+
+### Patch Changes
+
+- [`8fc5802`](https://github.com/theogravity/datadog-transports/commit/8fc5802b831e91e547c060e44afb257b61f0396d) Thanks [@theogravity](https://github.com/theogravity)! - Export type DDTransportOptions
+
 ## 3.0.3
 
 ### Patch Changes
