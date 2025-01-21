@@ -2,6 +2,15 @@
 
 [![NPM version](https://img.shields.io/npm/v/pino-datadog-transport.svg?style=flat-square)](https://www.npmjs.com/package/pino-datadog-transport) [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](http://www.typescriptlang.org/)
 
+## Notice
+
+**This library is no longer maintained.**
+
+It is recommended you use [LogLayer](https://loglayer.dev) if you need to ship logs to DataDog
+as you can send logs to DataDog and use the logging library of your choice.
+
+## About
+
 A [pino v7+](https://github.com/pinojs/pino) transport for sending logs to [Datadog](https://datadog.com/).
 
 It uses [datadog-api-client-typescript](https://github.com/DataDog/datadog-api-client-typescript) to
