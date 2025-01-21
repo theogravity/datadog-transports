@@ -1,5 +1,11 @@
 # electron-log-transport-datadog
 
+## 3.0.5
+
+### Patch Changes
+
+- [`220c319`](https://github.com/theogravity/datadog-transports/commit/220c319266cc9e4d3528021aaeedc5f20eb638e8) Thanks [@theogravity](https://github.com/theogravity)! - Update maintenance message
+
 ## 3.0.4
 
 ### Patch Changes
