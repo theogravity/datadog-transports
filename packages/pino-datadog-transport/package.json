@@ -21,7 +21,8 @@
     "format": "biome format src --write && biome format test --write",
     "lint": "biome lint src && biome lint test",
     "lint:check": "biome check --apply-unsafe src && check --apply-unsafe test",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "postinstall": "echo 'This package is no longer maintained. Please visit https://loglayer.dev and use the pino and DataDog transports.'"
   },
   "repository": {
     "type": "git",
