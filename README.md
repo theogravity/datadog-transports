@@ -8,7 +8,12 @@ This is a monorepo containing the following packages:
 
 You can find information for them in their respective packages via the `README.md` file.
 
-# Cloning / pulling this monorepo
+## Recommended
+
+It is recommended you use [LogLayer](https://loglayer.dev) if you need to ship logs to DataDog
+as you can send logs to DataDog and use the logging library of your choice.
+
+## Cloning / pulling this monorepo
 
 This monorepo uses [`pnpm`](https://pnpm.io/) because [I couldn't
 get workspaces to work properly](https://github.com/vercel/turbo/issues/7910#issuecomment-2041209008) under `npm` and `yarn`.
